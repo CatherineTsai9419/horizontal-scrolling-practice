@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>橫向卷軸練習作業</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./bootstrap-4.5.2/dist/css/bootstrap.css">
 </head>
+
 <body>
-    
+    <div class="header sticky-top">
+        <div class="left-div" id="obj">
+            <img class="sticky-top" src="./img/男-側臉.png" alt="">
+        </div>
+        <div class="right-div">
+            <img class="sticky-top" src="./img/女-側臉.png" alt="">
+        </div>
+    </div>
+    <div class="content"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="./bootstrap-4.5.2/dist/js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            //往下捲時left-div的寬度就隨之減少百分比
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                var w_height = $(window).height();
+                var scrollamount = (scroll/($(document).height()-w_height)*25);
+                var obj_w = $('#obj').width();
+                $('#obj').css("width",50-scrollamount+"%");
+            })
+            });
+    </script>
 </body>
+
 </html>

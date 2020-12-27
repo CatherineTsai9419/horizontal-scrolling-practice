@@ -1,0 +1,24 @@
+@import"cssreset";
+
+.header {
+    display: flex;
+    background-color: rgb(58, 75, 124);
+
+    img {
+        width: 300px;
+    }
+
+    .left-div {
+        width: 50%;
+        height: 1000px;
+        left: 0px;
+        background-color: rgb(129, 51, 51);
+    }
+
+    .right-div {
+        img {
+            right: 0;
+            width: 200px;
+        }
+    }
+}
