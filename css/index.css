@@ -133,26 +133,67 @@ table {
   border-spacing: 0;
 }
 
+[data-aos="new-animation"] {
+  opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+}
+
+[data-aos="new-animation"].aos-animate {
+  opacity: 1;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #3a4b7c;
+  background-color: #132f85;
 }
 
-.header img {
-  width: 300px;
+.header .people {
+  height: 100%;
 }
 
 .header .left-div {
   width: 50%;
-  height: 1000px;
+  height: 10000px;
   left: 0px;
-  background-color: #813333;
+  background-color: #4b2513;
 }
 
-.header .right-div img {
+.header .left-div .people {
+  width: 20%;
+  position: fixed;
+  left: 0;
+}
+
+.header .left-div .l_box {
+  width: 20%;
+  height: 50%;
+  margin-left: 20%;
+  top: 25%;
+  position: fixed;
+  left: 0;
+  width: 20%;
+  opacity: 0;
+}
+
+.header .right-div .people {
+  position: fixed;
   right: 0;
-  width: 200px;
+  width: 15%;
+}
+
+.header .right-div .r_box {
+  width: 20%;
+  height: 50%;
+  margin-right: 20%;
+  top: 25%;
+  position: fixed;
+  right: 0;
+  width: 20%;
+  opacity: 0;
 }
 /*# sourceMappingURL=index.css.map */

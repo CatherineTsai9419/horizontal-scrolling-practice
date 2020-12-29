@@ -1,24 +1,64 @@
 @import"cssreset";
 
+[data-aos="new-animation"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+
+    &.aos-animate {
+        opacity: 1;
+    }
+}
+
 .header {
     display: flex;
-    background-color: rgb(58, 75, 124);
+    background-color: rgb(19, 47, 133);
 
-    img {
-        width: 300px;
+    .people {
+        height: 100%;
+
     }
 
     .left-div {
         width: 50%;
-        height: 1000px;
+        height: 10000px;
         left: 0px;
-        background-color: rgb(129, 51, 51);
+        background-color: rgb(75, 37, 19);
+
+        .people {
+            width: 20%;
+            position: fixed;
+            left: 0;
+        }
+
+        .l_box {
+            width: 20%;
+            height: 50%;
+            margin-left: 20%;
+            top: 25%;
+            position: fixed;
+            left: 0;
+            width: 20%;
+            opacity: 0;
+        }
+
     }
 
     .right-div {
-        img {
+        .people {
+            position: fixed;
             right: 0;
-            width: 200px;
+            width: 15%;
+        }
+
+        .r_box {
+            width: 20%;
+            height: 50%;
+            margin-right: 20%;
+            top: 25%;
+            position: fixed;
+            right: 0;
+            width: 20%;
+            opacity: 0;
         }
     }
 }
